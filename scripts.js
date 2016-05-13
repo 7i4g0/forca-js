@@ -2,6 +2,7 @@
 var palavra = window.prompt('Digite a palavra desejada:', '');
 var qtd = erros = acertos = 0;
 var tmp_content = '';
+var boneco = document.getElementById('boneco');
 
 //converte a palavra em maiúsculas para padronizar
 palavra = palavra.toUpperCase();
@@ -54,6 +55,13 @@ function verifica(str) {
 
     if (!acertou) {
         erros++;
+        if(erros>1) {
+            boneco.getElementsByTagName('img')[erros-2].style.display = 'none';
+            boneco.getElementsByTagName('img')[erros-1].style.display = 'block';
+        } else {
+                boneco.getElementsByTagName('img')[erros-1].style.display = 'block';
+            }
+
         document.getElementById('num_erros').innerHTML=erros;
     }
 

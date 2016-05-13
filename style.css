@@ -65,3 +65,8 @@
 .right {
     text-align: right;
 }
+#boneco img {
+    display: none;
+    border: none;
+    margin-left: 30px;
+}
