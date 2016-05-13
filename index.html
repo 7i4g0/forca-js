@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>ExecuTião</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <h1 class="center">ExecuTião - Jogo de forca</h1>
+        <h4 class="center">Descubra a palavra correta. Você só pode errar 5 vezes.</h4>
+
+        <div id="forca">
+            <div id="boneco" class="center">
+                 O<br/>
+                /|\<br/>
+                &nbsp;/\<br/>
+            </div>
+            <h3 class="center"><span id="num_erros">0</span> Erros</h3>
+        </div>
+
+        <div id="palavra"></div>
+        <div id="bt_letras">
+            <ul id="ul_letras">
+                <li id="A" onclick="verifica('A')"><span>A</span></li>
+                <li id="B" onclick="verifica('B')"><span>B</span></li>
+                <li id="C" onclick="verifica('C')"><span>C</span></li>
+                <li id="D" onclick="verifica('D')"><span>D</span></li>
+                <li id="E" onclick="verifica('E')"><span>E</span></li>
+                <li id="F" onclick="verifica('F')"><span>F</span></li>
+                <li id="G" onclick="verifica('G')"><span>G</span></li>
+                <li id="I" onclick="verifica('I')"><span>I</span></li>
+                <li id="J" onclick="verifica('J')"><span>J</span></li>
+                <li id="K" onclick="verifica('K')"><span>K</span></li>
+                <li id="L" onclick="verifica('L')"><span>L</span></li>
+                <li id="M" onclick="verifica('M')"><span>M</span></li>
+                <li id="N" onclick="verifica('N')"><span>N</span></li>
+                <li id="O" onclick="verifica('O')"><span>O</span></li>
+                <li id="P" onclick="verifica('P')"><span>P</span></li>
+                <li id="Q" onclick="verifica('Q')"><span>Q</span></li>
+                <li id="R" onclick="verifica('R')"><span>R</span></li>
+                <li id="S" onclick="verifica('S')"><span>S</span></li>
+                <li id="T" onclick="verifica('T')"><span>T</span></li>
+                <li id="U" onclick="verifica('U')"><span>U</span></li>
+                <li id="V" onclick="verifica('V')"><span>V</span></li>
+                <li id="W" onclick="verifica('W')"><span>W</span></li>
+                <li id="X" onclick="verifica('X')"><span>X</span></li>
+                <li id="Y" onclick="verifica('Y')"><span>Y</span></li>
+                <li id="Z" onclick="verifica('Z')"><span>Z</span></li>
+            </ul>
+        </div>
+    </div>
+    <script src="scripts.js" charset="utf-8"></script>
+</body>
+
+</html>

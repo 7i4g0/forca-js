@@ -1,0 +1,67 @@
+#palavra {
+    margin-top: 90px;
+    margin-left: 30px;
+    height: 70px;
+    border: 1px solid #f7f7f7;
+}
+.letra {
+    font-size: 3em;
+    display: inline-block;
+    width: 30px;
+    line-height: 1em;
+    margin: 5px;
+    border-bottom: 2px solid #222;
+}
+.letra span {
+    display: none;
+}
+
+#bt_letras ul {
+    list-style: none;
+    margin: 50px 0 0;
+    paddding: 0;
+    max-width: 60%;
+}
+#bt_letras ul li {
+    padding: 10px 20px;
+    margin: 5px;
+    width: 46px;
+    text-align: center;
+    font-size: 1em;
+    background-color: #9a9a9a;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
+.clicada {
+    background-color: #F7F7F7 !important;
+    color: #DDD;
+    cursor: default;
+}
+#boneco {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 60px;
+}
+#forca {
+    display: block;
+    width: 40%;
+    box-sizing: border-box;
+    float: right;
+}
+#forca h3 {
+    margin-top: 30px;
+}
+#forca h3 span {
+    color: #F12;
+    padding-right: 10px;
+    font-size: 1.6em;
+}
+.center {
+    text-align: center;
+}
+.right {
+    text-align: right;
+}
