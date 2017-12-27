@@ -1,5 +1,11 @@
 //solicita a palavra desejada e define as variáveis
-var palavra = window.prompt('Digite a palavra desejada:', '');
+var palavras_solo = ['paralelepido', 'super mario world', 'pidamonhangaba', 'fernandopolis', 'pedro alvares cabral', 'mortadela', 'vai que e tua tafarel'];
+var palavra = window.prompt('Digite a palavra desejada ou clique em Cancelar para jogo solo:', '');
+if (palavra === null) {
+    var tamanho_array = palavras_solo.length -1;
+    var x = Math.floor(Math.random() * tamanho_array);
+    palavra = palavras_solo[x];
+}
 var qtd = erros = acertos = 0;
 var tmp_content = '';
 var boneco = document.getElementById('boneco');
@@ -74,6 +80,7 @@ function verifica(str) {
             itens[i].removeAttribute("onclick");
             itens[i].style.cursor = 'default';
         }
+        //cria o botão de restart
     }
 
     if(erros == 5) {
