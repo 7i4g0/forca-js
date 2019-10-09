@@ -1,12 +1,12 @@
 //solicita a palavra desejada e define as variáveis
-var palavras_solo = ['paralelepido', 'super mario world', 'pidamonhangaba', 'fernandopolis', 'pedro alvares cabral', 'mortadela', 'vai que e tua tafarel'];
+var palavras_solo = ['paralelepido', 'super mario world', 'pidamonhangaba', 'fernandopolis', 'pedro alvares cabral', 'mortadela', 'sai que e tua tafarel', 'pirulito', 'brasileiro', 'tesouro', 'laringe', 'inspecionar', 'escova de dentes', 'cicatriz', 'sugestao', 'milionario', 'espantalho', 'microfone', 'abduzido', 'majestosa', 'otorrinolaringologista', 'portuguesa', 'arame farpado', 'permissao'];
 var palavra = window.prompt('Digite a palavra desejada ou clique em Cancelar para jogo solo:', '');
 if (palavra === null) {
     var tamanho_array = palavras_solo.length -1;
     var x = Math.floor(Math.random() * tamanho_array);
     palavra = palavras_solo[x];
 }
-var qtd = erros = acertos = 0;
+var qtd = espacos = erros = acertos = 0;
 var tmp_content = '';
 var boneco = document.getElementById('boneco');
 
@@ -21,7 +21,12 @@ qtd = arr_palavra.length;
 
 //coloca as letras na tela com display:none
 for (var i = 0; i < qtd; i++) {
-    tmp_content += '<div class="letra"><span id="'+i+'">'+arr_palavra[i]+'</span></div>';
+    if (arr_palavra[i] == ' ') {
+        espacos++;
+        tmp_content += '<div class="letra space"><span> </span></div>';
+    } else {
+        tmp_content += '<div class="letra"><span id="'+i+'">'+arr_palavra[i]+'</span></div>';
+    }
 }
 document.getElementById("palavra").innerHTML = tmp_content;
 
@@ -47,8 +52,10 @@ function verifica(str) {
         var letra_clicada = document.getElementById(str);
 
         //remove o evento de click inabilitando a letra já clicada
-        letra_clicada.removeAttribute("onclick");
-        letra_clicada.className = "clicada";
+        if(letra_clicada) {
+            letra_clicada.removeAttribute("onclick");
+            letra_clicada.className = "clicada";
+        }
 
         //verifica se a letra escolhida está no array
         if(replaceSpecialChars(elem) == str) {
@@ -72,7 +79,7 @@ function verifica(str) {
     }
 
     //se acertou todas as letras, ganhou
-    if(acertos == qtd) {
+    if(acertos == (qtd - espacos)) {
         alert('* You Win! *');
         //remove o evento de clique de todas as letras
         itens = document.getElementsByTagName('li');

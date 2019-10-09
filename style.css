@@ -15,11 +15,14 @@
 .letra span {
     display: none;
 }
+.space {
+    border-bottom: none;
+}
 
 #bt_letras ul {
     list-style: none;
     margin: 50px 0 0;
-    paddding: 0;
+    padding: 0;
     max-width: 60%;
 }
 #bt_letras ul li {
